@@ -42,12 +42,30 @@ function title_case_form_submit($form, &$form_state) {
     //recombine words into one string
 
     $list_of_words = explode(" ", $input);
-    drupal_set_message($list_of_words[0]);
     $output = array();
 
+    $articles = array(
+        'is',
+        'the',
+        'of',
+        'and',
+        'for',
+        'by',
+        'a',
+        'an',
+        'but',
+        'on',
+        'with'
+    )
+
     foreach($list_of_words as $word) {
-        $capitalized_word = ucfirst($word);
-        array_push($output, $capitalized_word);
+        if(in_array($word, $articles)) {
+            array_push($output, $word);
+        }
+        else {
+            $capitalized_word = ucfirst($word);
+            array_push($output, $capitalized_word);
+        }
     }
 
     $output = implode(" ", $output);
