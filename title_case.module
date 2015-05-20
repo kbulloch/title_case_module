@@ -34,6 +34,16 @@ function title_case_form() {
 
 function title_case_form_submit($form, &$form_state) {
     $input = $form_state['values']['input'];
+
+    //get user input
+    //break string up into words with explode function
+    //look at first letter in each word
+    //make capital
+    //recombine words into one string
+
+    $list_of_words = explode(" ", $input);
+    drupal_set_message($list_of_words);
+        
     $_SESSION['title_case_output'] = $input;
     $form_state['redirect'] = 'title_case_success';
 }
