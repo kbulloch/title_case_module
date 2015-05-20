@@ -8,8 +8,8 @@ function title_case_menu() {
         'access callback' => TRUE,
         'type' => MENU_NORMAL_ITEM,
     );
-    $items['title_case_result'] = array(
-        'title' => 'Result',
+    $items['title_case_success'] = array(
+        'title' => 'Success!!',
         'page callback' => 'title_case_success',
         'access callback' => TRUE,
         'type' => MENU_CALLBACK,
