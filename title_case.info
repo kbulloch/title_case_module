@@ -1,0 +1,5 @@
+name = Title Case-Maker
+description = Take user input and return a title cased thing
+package = Custom Modules
+core = 7.x
+files[] = title_case.module
