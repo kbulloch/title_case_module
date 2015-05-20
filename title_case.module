@@ -43,8 +43,16 @@ function title_case_form_submit($form, &$form_state) {
 
     $list_of_words = explode(" ", $input);
     drupal_set_message($list_of_words[0]);
+    $output = array();
 
-    $_SESSION['title_case_output'] = $input;
+    foreach($list_of_words as $word) {
+        $capitalized_word = ucfirst($word);
+        array_push($output, $capitalized_word);
+    }
+
+    $output = implode(" ", $output);
+
+    $_SESSION['title_case_output'] = $output;
     $form_state['redirect'] = 'title_case_success';
 }
 
