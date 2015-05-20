@@ -56,7 +56,7 @@ function title_case_form_submit($form, &$form_state) {
         'but',
         'on',
         'with'
-    )
+    );
 
     foreach($list_of_words as $word) {
         if(in_array($word, $articles)) {
@@ -66,7 +66,7 @@ function title_case_form_submit($form, &$form_state) {
             $capitalized_word = ucfirst($word);
             array_push($output, $capitalized_word);
         }
-    }
+    };
 
     $output = implode(" ", $output);
 
