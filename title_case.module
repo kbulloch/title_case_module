@@ -55,7 +55,10 @@ function title_case_form_submit($form, &$form_state) {
         'an',
         'but',
         'on',
-        'with'
+        'with',
+        'at',
+        'that',
+        'this',
     );
 
     foreach($list_of_words as $word) {
